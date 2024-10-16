@@ -1,9 +1,15 @@
 #!/usr/bin/env python3
 
 from rich import print
+from pathlib import PurePath
+from typing import Final
+import gnosis.path
+
+current_script_dir: Final[PurePath] = PurePath(__file__).parent
+stage_dir: PurePath = current_script_dir.parent.parent / gnosis.path.default_stage_dir_name()
 
 def main():
-    print("Hello [red]World![/red]")
+    print(f"Search for new files in {stage_dir}")
 
 if __name__ == "__main__":
     main()
