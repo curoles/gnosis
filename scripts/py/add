@@ -1,0 +1,9 @@
+#!/usr/bin/env python3
+
+from rich import print
+
+def main():
+    print("Hello [red]World![/red]")
+
+if __name__ == "__main__":
+    main()
